@@ -10,6 +10,11 @@ dotenv.config({ path: './config/config.env' });
 
 const app = express();
 
+//for personal testing 
+app.get('/', (req, res) => {
+  res.send('Hello from express');
+})
+
 // Dev logging middleware
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
